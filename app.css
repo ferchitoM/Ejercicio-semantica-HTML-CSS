@@ -1,0 +1,120 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: green;
+  height: 3rem;
+}
+
+.container-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+}
+
+.container-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  height: 100%;
+}
+
+.container-main #index {
+  background-color: #e7e7e7;
+  height: 100%;
+  width: 4rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+main #search {
+  background-color: #d1d1d1;
+  height: 5rem;
+}
+
+main #products {
+  background-color: #b1b1b1;
+  height: 100%;
+  padding: 1rem;
+}
+
+main #products article {
+  background-color: white;
+  border: 1px solid black;
+}
+
+#shop_car {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-flex: .4;
+      -ms-flex-positive: .4;
+          flex-grow: .4;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+#shop_car h3 {
+  margin: 0;
+  background-color: #779db3;
+  color: white;
+}
+
+#shop_car #items article {
+  border: 1px solid red;
+}
+
+#shop_car footer {
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+  background-color: #e7e7e7;
+  color: white;
+}
+
+#shop_car footer #sale_button {
+  background-color: #e7e7e7;
+}
+
+#shop_car footer #sale_button button {
+  background-color: green;
+  color: white;
+}
+
+#shop_car footer #cancel_sale {
+  background-color: #779db3;
+}
+/*# sourceMappingURL=app.css.map */
