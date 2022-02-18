@@ -31,6 +31,7 @@ html, body {
 }
 
 .container-body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,14 +40,17 @@ html, body {
       -ms-flex-flow: column;
           flex-flow: column;
   height: 100%;
+  border: 5px solid red;
 }
 
 .container-body nav {
   background-color: #00b19d;
-  padding: 0.5rem;
+  height: 4rem;
+  padding: 1rem;
+  border: 5px solid yellow;
 }
 
-.container-main {
+.container-body .container-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,16 +58,17 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  height: 100%;
+  height: calc(100% - 4rem);
+  border: 5px solid blue;
 }
 
-.container-main #index {
+.container-body .container-main #index {
   background-color: #e7e7e7;
   height: 100%;
   padding: 1rem;
 }
 
-main {
+.container-body .container-main main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,26 +82,26 @@ main {
           flex: 1;
 }
 
-main #search {
+.container-body .container-main main #search {
   background-color: #007e70;
-  height: 5rem;
+  padding: 1rem;
 }
 
-main #search input {
+.container-body .container-main main #search input {
   border: 2px solid #44c6b7;
 }
 
-main #search label {
+.container-body .container-main main #search label {
   color: #00b19d;
 }
 
-main #search #nuevo-prod {
+.container-body .container-main main #search #nuevo-prod {
   color: #00b19d;
 }
 
-main #products {
-  margin-top: 2rem;
-  margin-left: 1rem;
+.container-body .container-main main #products {
+  padding-top: 1rem;
+  margin-left: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,13 +114,16 @@ main #products {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow-y: auto;
+  height: 100%;
 }
 
-main #products article {
+.container-body .container-main main #products article {
   background-color: white;
-  margin: 1rem;
-  width: 8rem;
-  height: 10rem;
+  margin: 2rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+  height: 13rem;
   border: 1px solid red;
   color: #b9b9b9;
   background-color: red;
@@ -134,29 +142,37 @@ main #products article {
           flex: 0.5;
   background-color: #f1f1f1;
   height: 100%;
+  border: 5px solid orange;
 }
 
 #shop-car h3 {
   margin: 0;
   background-color: #809bb6;
   color: white;
+  height: 3rem;
+}
+
+#shop-car #items {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: auto;
 }
 
 #shop-car #items article {
   border: 1px solid red;
   color: #7a7a7a;
+  height: 5rem;
 }
 
 #shop-car footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   background-color: #e7e7e7;
+  border: 5px solid black;
 }
 
 #shop-car footer #sale-button {
   background-color: #e7e7e7;
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
 
 #shop-car footer #sale-button button {
@@ -166,5 +182,6 @@ main #products article {
 
 #shop-car footer #cancel-button {
   background-color: #809bb6;
+  padding: 0.5rem;
 }
 /*# sourceMappingURL=app.css.map */
