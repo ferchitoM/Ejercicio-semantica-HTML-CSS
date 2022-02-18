@@ -118,6 +118,7 @@ main #products article {
   height: 10rem;
   border: 1px solid red;
   color: #b9b9b9;
+  background-color: red;
 }
 
 #shop-car {
