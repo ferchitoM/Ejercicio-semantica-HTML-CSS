@@ -21,7 +21,8 @@
 *
     box-sizing: border-box
 
-$b: 0
+//Borders
+$b: 5px
 
 html, body
     height: 100%
@@ -119,6 +120,7 @@ main
     input
         border: 2px solid #44c6b7
         border-radius: 0 5px 5px 0
+        width: 100%
 
     #nuevo-prod
         color: #00b19d
@@ -246,6 +248,45 @@ main
 .selected, #section-products>article:hover
     border: 2px solid #44c6b7 !important
 
+.shop_open
+    animation: animation-shop-open 1s ease
+    animation-fill-mode: forwards
+
+.shop_close
+    animation: animation-shop-close 1s ease
+    animation-fill-mode: forwards
+
+@keyframes animation-shop-open
+    0%
+        visibility: visible
+        opacity: 0
+        width: 0%
+        height: 40%
+    10%
+        opacity: 1
+
+    40%
+        height: 50%
+        width: 100%
+    100%
+        width: 100%
+        height: 100%
+        visibility: visible
+
+@keyframes animation-shop-close
+    0%
+        visibility: visible
+    60%
+        height: 50%
+        width: 100%
+    90%
+        opacity: 1
+    100%
+        opacity: 0
+        width: 0%
+        height: 40%
+        visibility: hidden
+
 #aside-shop
     position: relative
     display: flex
@@ -301,13 +342,14 @@ main
         position: absolute
         z-index: 1000
         width: 100%
+        right: 0
         height: calc(100% - 3.5rem)
-        //display: none
+        visibility: hidden
 
     #aside-index
         display: none
-    #section-search
-        flex-wrap: wrap
+    #section-search input
+        width: 50%
 
 @media (min-width: 381px) and (max-width: 430px)
     #section-products
@@ -318,7 +360,10 @@ main
         z-index: 1000
         width: 100%
         height: calc(100% - 3.5rem)
-        //display: none
+        display: none
+
+    #section-search input
+        width: 50%
 
 @media (min-width: 430px) and (max-width: 480px)
     #section-products
@@ -329,7 +374,11 @@ main
         z-index: 1000
         width: 100%
         height: calc(100% - 3.5rem)
-        //display: none
+        display: none
+
+#section-products:not([data-scroll='0'])
+    nav
+        display: none
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px)
@@ -350,13 +399,14 @@ main
         flex: 1
     #aside-shop
         flex: 1.2
+        //display: none
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1024px) and (max-width: 1280px)
-    body
-        background-color: green
+    #button-shop
+        display: none
 
 /* Media Query for Large screens */
 @media (min-width: 1280px)
-    body
-        background-color: white
+    #button-shop
+        display: none

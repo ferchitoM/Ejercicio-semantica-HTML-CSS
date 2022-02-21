@@ -15,11 +15,11 @@
   </head>
 
   <body>
-    <div class="container-body">
+    <div class="container-body" id="app">
       <!-- *NAV -->
       <nav>
         <h1>TITLE</h1>
-        <a href="">
+        <a id="button-shop" @click="openShop">
           <i class="material-icons-outlined">shopping_cart</i>
         </a>
       </nav>
@@ -142,7 +142,7 @@
         </main>
 
         <!-- *SHOPPING CAR -->
-        <aside id="aside-shop">
+        <aside id="aside-shop" :class="shop_state">
           <h4>SALES INVOICE</h4>
 
           <!-- *ITEMS -->
@@ -177,5 +177,8 @@
         </aside>
       </div>
     </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
   </body>
 </html>

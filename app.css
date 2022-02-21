@@ -36,7 +36,7 @@ html, body {
   color: #e8ebf0;
   font-family: 'Roboto';
   overflow: hidden;
-  border: 0 solid red;
+  border: 5px solid red;
 }
 
 .container-body {
@@ -50,7 +50,7 @@ html, body {
           flex-flow: column;
   height: 100%;
   width: 100%;
-  border: 0 solid orange;
+  border: 5px solid orange;
 }
 
 nav {
@@ -67,7 +67,7 @@ nav {
   height: 3.5rem;
   width: 100%;
   padding: 1rem;
-  border: 0 solid yellow;
+  border: 5px solid yellow;
 }
 
 nav h1 {
@@ -91,7 +91,7 @@ nav i {
           flex-flow: row;
   height: calc(100% - 3.5rem);
   width: 100%;
-  border: 0 solid blue;
+  border: 5px solid blue;
 }
 
 #aside-index {
@@ -105,7 +105,7 @@ nav i {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  border: 0 solid gray;
+  border: 5px solid gray;
 }
 
 #aside-index span {
@@ -134,13 +134,13 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 0 solid green;
+  border: 5px solid green;
 }
 
 #section-search {
   background-color: #e8ebf0;
   padding: 0.8rem;
-  border: 0 solid #2bff00;
+  border: 5px solid #2bff00;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,6 +172,7 @@ main {
 #section-search input {
   border: 2px solid #44c6b7;
   border-radius: 0 5px 5px 0;
+  width: 100%;
 }
 
 #section-search #nuevo-prod {
@@ -206,7 +207,7 @@ main {
   overflow: auto;
   height: 100%;
   width: 100%;
-  border: 0 solid lightblue;
+  border: 5px solid lightblue;
 }
 
 #section-products article {
@@ -347,6 +348,100 @@ main {
   border: 2px solid #44c6b7 !important;
 }
 
+.shop_open {
+  -webkit-animation: animation-shop-open 1s ease;
+          animation: animation-shop-open 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.shop_close {
+  -webkit-animation: animation-shop-close 1s ease;
+          animation: animation-shop-close 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animation-shop-open {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    width: 0%;
+    height: 40%;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    height: 50%;
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes animation-shop-open {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    width: 0%;
+    height: 40%;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    height: 50%;
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes animation-shop-close {
+  0% {
+    visibility: visible;
+  }
+  60% {
+    height: 50%;
+    width: 100%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+    height: 40%;
+    visibility: hidden;
+  }
+}
+
+@keyframes animation-shop-close {
+  0% {
+    visibility: visible;
+  }
+  60% {
+    height: 50%;
+    width: 100%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+    height: 40%;
+    visibility: hidden;
+  }
+}
+
 #aside-shop {
   position: relative;
   display: -webkit-box;
@@ -361,7 +456,7 @@ main {
           flex: 0.5;
   background-color: #f1f1f1;
   height: 100%;
-  border: 0 solid orange;
+  border: 5px solid orange;
 }
 
 #aside-shop h4 {
@@ -392,7 +487,7 @@ main {
   position: relative;
   bottom: 0;
   background-color: #e7e7e7;
-  border: 0 solid black;
+  border: 5px solid black;
 }
 
 #aside-shop footer #div-sale {
@@ -422,14 +517,15 @@ main {
     position: absolute;
     z-index: 1000;
     width: 100%;
+    right: 0;
     height: calc(100% - 3.5rem);
+    visibility: hidden;
   }
   #aside-index {
     display: none;
   }
-  #section-search {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  #section-search input {
+    width: 50%;
   }
 }
 
@@ -445,6 +541,10 @@ main {
     z-index: 1000;
     width: 100%;
     height: calc(100% - 3.5rem);
+    display: none;
+  }
+  #section-search input {
+    width: 50%;
   }
 }
 
@@ -460,7 +560,12 @@ main {
     z-index: 1000;
     width: 100%;
     height: calc(100% - 3.5rem);
+    display: none;
   }
+}
+
+#section-products:not([data-scroll='0']) nav {
+  display: none;
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
@@ -497,15 +602,15 @@ main {
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1024px) and (max-width: 1280px) {
-  body {
-    background-color: green;
+  #button-shop {
+    display: none;
   }
 }
 
 /* Media Query for Large screens */
 @media (min-width: 1280px) {
-  body {
-    background-color: white;
+  #button-shop {
+    display: none;
   }
 }
 /*# sourceMappingURL=app.css.map */
