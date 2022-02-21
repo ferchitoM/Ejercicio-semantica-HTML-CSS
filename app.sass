@@ -14,111 +14,273 @@
 ::-webkit-scrollbar-thumb:hover
     background: #b3b3b3
 
+@font-face
+    font-family: Roboto
+    src: url('fonts/Roboto-Regular.ttf')
+
 *
     box-sizing: border-box
 
+$b: 0
+
 html, body
     height: 100%
+    width: 100%
     margin: 0
     padding: 0
     color: #e8ebf0
-    //overflow: hidden
+    font-family: 'Roboto'
+    overflow: hidden
+    border: $b solid red
 
 .container-body
     position: relative
     display: flex
     flex-flow: column
     height: 100%
-    border: 5px solid red
+    width: 100%
+    border: $b solid orange
 
-    nav
-        background-color: #00b19d
-        height: 4rem
-        padding: 1rem
-        border: 5px solid yellow    
+nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #00b19d
+    height: 3.5rem
+    width: 100%
+    padding: 1rem
+    border: $b solid yellow
 
-    .container-main
+    h1
+        margin: 0
+
+    i
+        padding: 8px
+        color: #ffffff
+        font-size: 1.5rem !important
+
+.container-main
+    background-color: #e8ebf0
+    display: flex
+    flex-flow: row
+    height: calc(100% - 3.5rem)
+    width: 100%
+    border: $b solid blue
+
+#aside-index
+    background-color: #ffffff
+    height: 100%
+    width: 5rem
+    display: flex
+    flex-flow: column
+    border: $b solid gray
+
+    span
+        background-color: blue
+        height: 2.3rem
+        width: 2.3rem
+        border-radius: 2.3rem
+        text-align: center
+        font-weight: 00
+        color: white
+        margin: 1rem 0.8rem 0
+        padding-top: 0.5rem
+        cursor: pointer
+
+main
+    display: flex
+    flex-flow: column
+    height: 100%
+    width: 100%
+    flex: 1
+    border: $b solid green
+
+#section-search
+    background-color: #e8ebf0
+    padding: 0.8rem
+    border: $b solid #2bff00
+    display: flex
+    flex-flow: row
+
+    #search-button
         display: flex
-        flex-flow: row
-        height: calc(100% - 4rem)
-        border: 5px solid blue
+        background-color: #007e70
+        text-align: center
+        border-radius: 5px 0 0 5px
+        color: white
+        cursor: pointer
+        padding: 7px 0.8rem
 
-        #index
-            background-color: #e7e7e7
-            height: 100%
-            padding: 1rem
+        i
+            vertical-align: middle
+            align-content: center
+            font-size: 1.3rem
 
-        main
+    input
+        border: 2px solid #44c6b7
+        border-radius: 0 5px 5px 0
+
+    #nuevo-prod
+        color: #00b19d
+        display: flex
+        padding: 7px 0.5rem
+        cursor: pointer
+
+        label
+            font-size: 0.8rem
+            padding: 5px 5px 0 10px
+
+#section-products
+    padding-top: 1rem
+    margin-left: 1.5rem
+    display: flex
+    flex-flow: row
+    justify-content: flex-start
+    flex-wrap: wrap
+    overflow: auto
+    height: 100%
+    width: 100%
+    border: $b solid lightblue
+
+    article
+        background-color: #ffffff
+        border: 2px solid #44c6b700
+        position: relative
+        display: flex
+        flex-direction: column
+        width: 12rem
+        height: 18rem
+        margin: 2rem
+        margin-bottom: 2rem
+        align-items: center
+        transition: all 200ms ease
+        cursor: pointer
+        user-select: none
+        box-shadow: 0 8px 17px 2px #00000014, 0 3px 14px 2px #00000012, 0 5px 5px -3px #00000020
+
+        .marco-img
+            border: 0.8rem solid #ffffff
             display: flex
-            flex-flow: column
+            justify-content: center
+            width: 100%
             height: 100%
-            flex: 1
 
-            #search
-                background-color: #007e70
-                padding: 1rem
+            .id
+                background-color: #ffffff
+                position: absolute
+                top: 0.8rem
+                left: 0.8rem
+                margin: 0
+                font-size: 0.75rem
+                width: 3.2rem
+                height: 1.1rem
+                font-weight: 100
+                text-align: center
+                color: #44c6b7
 
-                input
-                    border: 2px solid #44c6b7
+            .top
+                position: absolute
+                width: 2.2rem
+                height: 1.6rem
+                background-color: white
+                padding-left: 4px
+                color: #44c6b7
+                right: 0.8rem
+                top: 1.5rem
+                font-size: 0.5rem
 
-                label
-                    color: #00b19d
-
-                #nuevo-prod
-                    color: #00b19d
-
-            #products
-                padding-top: 1rem
-                margin-left: 1.5rem
-                display: flex
-                flex-flow: row
-                justify-content: flex-start
-                flex-wrap: wrap
-                overflow-y: auto
+            .img-prod
+                width: 100%
                 height: 100%
+                background-size: cover
+                background-position: center center
+                display: flex
+                flex-flow: column
+                justify-content: flex-end
+                align-items: flex-end
 
-                article
-                    background-color: white
-                    margin: 2rem
-                    margin-bottom: 2rem
-                    width: 10rem
-                    height: 13rem
-                    border: 1px solid red
-                    color: #b9b9b9
-                    background-color: red
-                    //color: #7a7a7a
+                .inventario
+                    background-color: #ffffff
+                    margin: 0
+                    font-size: 0.7rem
+                    width: 3rem
+                    height: 1.2rem
+                    text-align: center
+                    padding-top: 3px
+                    color: #7a7a7a
+                    font-weight: bold
 
-#shop-car
+        .cantidad
+            background-color: #ffffff
+            padding-top: 6px
+            position: absolute
+            z-index: 1000
+            top: -0.5rem
+            right: -0.8rem
+            border: 2px solid #44c6b7
+            width: 2.2rem
+            height: 2.2rem
+            border-radius: 31px
+            color: #44c6b7
+            font-weight: 600
+            font-size: 0.9rem
+            text-align: center
+            //opacity: 0
+
+        .nombre
+            color: #b9b9b9
+            font-size: 0.85rem
+            font-weight: 100
+            margin: 0 0.5rem 0 0.5rem
+            text-align: center
+            width: 100%
+            height: 3rem
+
+        .precio
+            font-weight: bold
+            color: #7a7a7a
+            margin: 0
+            margin-bottom: 1rem
+            font-size: 0.95rem
+
+.selected, #section-products>article:hover
+    border: 2px solid #44c6b7 !important
+
+#aside-shop
+    position: relative
     display: flex
     flex-flow: column
     flex: 0.5
     background-color: #f1f1f1
     height: 100%
-    border: 5px solid orange
+    border: $b solid orange
 
-    h3
-        margin: 0
+    h4
         background-color: #809bb6
-        color: white
+        color: #ffffff
+        margin: 0
+        padding: 0.7rem
+        text-align: center
+        font-weight: 100
         height: 3rem
 
-    #items
+    section
         flex: 1
         overflow: auto
+
         article
             border: 1px solid red
             color: #7a7a7a
             height: 5rem
-            
-    footer
-        // position: fixed
-        // bottom: 0
-        // height: 5rem
-        // flex: 0.2
-        background-color: #e7e7e7
-        border: 5px solid black
 
-        #sale-button
+    footer
+        width: 100%
+        position: relative
+        bottom: 0
+        background-color: #e7e7e7
+        border: $b solid black
+
+        #div-sale
             background-color: #e7e7e7
             padding: 1.5rem
 
@@ -126,6 +288,75 @@ html, body
                 background-color: #00b19d
                 color: white
 
-        #cancel-button
+        #div-cancel
             background-color: #809bb6
             padding: 0.5rem
+
+/* Media Query for Mobile Devices */
+@media (max-width: 380px)
+    #section-products
+        margin: 0
+        justify-content: center
+    #aside-shop
+        position: absolute
+        z-index: 1000
+        width: 100%
+        height: calc(100% - 3.5rem)
+        //display: none
+
+    #aside-index
+        display: none
+    #section-search
+        flex-wrap: wrap
+
+@media (min-width: 381px) and (max-width: 430px)
+    #section-products
+        margin: 0
+        justify-content: center
+    #aside-shop
+        position: absolute
+        z-index: 1000
+        width: 100%
+        height: calc(100% - 3.5rem)
+        //display: none
+
+@media (min-width: 430px) and (max-width: 480px)
+    #section-products
+        margin: 0
+        justify-content: center
+    #aside-shop
+        position: absolute
+        z-index: 1000
+        width: 100%
+        height: calc(100% - 3.5rem)
+        //display: none
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px)
+    #section-products
+        margin: 0
+        justify-content: center
+    #aside-shop
+        position: absolute
+        right: 0
+        z-index: 1000
+        width: 60%
+        height: calc(100% - 3.5rem)
+        display: none
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 767px) and (max-width: 1024px)
+    main
+        flex: 1
+    #aside-shop
+        flex: 1.2
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1024px) and (max-width: 1280px)
+    body
+        background-color: green
+
+/* Media Query for Large screens */
+@media (min-width: 1280px)
+    body
+        background-color: white

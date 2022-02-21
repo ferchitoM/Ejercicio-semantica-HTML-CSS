@@ -5,59 +5,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Card - Ejercicio semántica</title>
-    <!-- <link rel="stylesheet" href="app.css" /> -->
+    <!-- *STYLES -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="app.css" />
+    <!-- *STYLES -->
   </head>
 
   <body>
     <div class="container-body">
-      <nav>nav</nav>
+      <!-- *NAV -->
+      <nav>
+        <h1>TITLE</h1>
+        <a href="">
+          <i class="material-icons-outlined">shopping_cart</i>
+        </a>
+      </nav>
 
       <div class="container-main">
-        <aside id="index">index</aside>
+        <!-- *INDEX -->
+        <aside id="aside-index">
+          <span style="background-color: #3dcc68">A</span>
+          <span style="background-color: #546dc9">B</span>
+          <span style="background-color: #b2fffc">C</span>
+          <span style="background-color: #dd99fc">D</span>
+          <span style="background-color: #d4ffaa">E</span>
+          <span style="background-color: #e8ab51">F</span>
+        </aside>
 
         <main>
-          <section id="search">
-            <button>Search</button>
+          <!-- *SEARCH -->
+          <section id="section-search">
+            <a id="search-button">
+              <i class="material-icons">search</i>
+            </a>
             <input type="text" />
-            <label for="nuevo-prod">Nuevo</label>
-            <button id="nuevo-prod">+</button>
+            <a id="nuevo-prod">
+              <label>NEW</label>
+              <i class="material-icons">add_to_photos</i>
+            </a>
           </section>
+          <!-- *SEARCH -->
 
-          <section id="products">
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
-            <article>article</article>
+          <section id="section-products">
+            <!-- *PRODUCT -->
+            <article class="selected">
+              <span class="cantidad">1</span>
+              <div class="marco-img">
+                <h5 class="id">647189</h5>
+                <span class="top">
+                  <i class="material-icons prefix">star</i>
+                </span>
+                <div
+                  class="img-prod"
+                  style="background-image: url('images/gamer1.jpg')"
+                >
+                  <small class="inventario">Inv 100</small>
+                </div>
+              </div>
+              <h5 class="nombre">Aurora Lux - Ryzen 5 4600+</h5>
+              <h4 class="precio">$ 2.500</h4>
+            </article>
+            <!-- *PRODUCT -->
+            <article>
+              <div class="marco-img">
+                <h5 class="id">647189</h5>
+                <span class="top">
+                  <i class="material-icons prefix">star</i>
+                </span>
+                <div
+                  class="img-prod"
+                  style="background-image: url('images/gamer1.jpg')"
+                >
+                  <small class="inventario">Inv 100</small>
+                </div>
+              </div>
+              <h5 class="nombre">Aurora Lux - Ryzen 5 4600+</h5>
+              <h4 class="precio">$ 2.500</h4>
+            </article>
+            <!-- *PRODUCT -->
+            <article>
+              <div class="marco-img">
+                <h5 class="id">647189</h5>
+                <span class="top">
+                  <i class="material-icons prefix">star</i>
+                </span>
+                <div
+                  class="img-prod"
+                  style="background-image: url('images/gamer1.jpg')"
+                >
+                  <small class="inventario">Inv 100</small>
+                </div>
+              </div>
+              <h5 class="nombre">Aurora Lux - Ryzen 5 4600+</h5>
+              <h4 class="precio">$ 2.500</h4>
+            </article>
+            <!-- *PRODUCT -->
+            <article>
+              <div class="marco-img">
+                <h5 class="id">647189</h5>
+                <span class="top">
+                  <i class="material-icons prefix">star</i>
+                </span>
+                <div
+                  class="img-prod"
+                  style="background-image: url('images/gamer1.jpg')"
+                >
+                  <small class="inventario">Inv 100</small>
+                </div>
+              </div>
+              <h5 class="nombre">Aurora Lux - Ryzen 5 4600+</h5>
+              <h4 class="precio">$ 2.500</h4>
+            </article>
+            <!-- *PRODUCT -->
+            <article class="selected">
+              <span class="cantidad">1</span>
+              <div class="marco-img">
+                <h5 class="id">647189</h5>
+                <span class="top">
+                  <i class="material-icons prefix">star</i>
+                </span>
+                <div
+                  class="img-prod"
+                  style="background-image: url('images/gamer1.jpg')"
+                >
+                  <small class="inventario">Inv 100</small>
+                </div>
+              </div>
+              <h5 class="nombre">Aurora Lux - Ryzen 5 4600+</h5>
+              <h4 class="precio">$ 2.500</h4>
+            </article>
+            <!-- *PRODUCT -->
           </section>
         </main>
 
-        <aside id="shop-car">
-          <h3>SALES INVOICE</h3>
+        <!-- *SHOPPING CAR -->
+        <aside id="aside-shop">
+          <h4>SALES INVOICE</h4>
 
-          <section id="items">
+          <!-- *ITEMS -->
+          <section>
             <article>Article</article>
             <article>Article</article>
             <article>Article</article>
@@ -69,15 +158,18 @@
             <article>Article</article>
             <article>Article</article>
             <article>Article</article>
-            <article>Article</article>
+            <article>Article n</article>
           </section>
 
           <footer>
-            <div id="sale-button">
+            <!-- *SALE -->
+            <div id="div-sale">
               <button>SALE</button>
               <span>$0.00</span>
             </div>
-            <div id="cancel-button">
+
+            <!-- *CANCEL -->
+            <div id="div-cancel">
               <span>0 PRODUCTS</span>
               <button>CANCEL</button>
             </div>
