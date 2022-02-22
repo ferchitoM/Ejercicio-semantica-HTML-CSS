@@ -1,0 +1,462 @@
+#section-products:not([data-scroll='0']) nav {
+  display: none;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 380px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #aside-shop {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    right: 0;
+    height: calc(100% - 3.5rem);
+    visibility: hidden;
+  }
+  #aside-index {
+    display: none;
+  }
+  #section-search input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 430px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #aside-shop {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    right: 0;
+    height: calc(100% - 3.5rem);
+    visibility: hidden;
+  }
+  #section-search input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 550px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #aside-shop {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    right: 0;
+    height: calc(100% - 3.5rem);
+    visibility: hidden;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 550px) and (max-width: 700px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #aside-shop {
+    position: absolute;
+    z-index: 1000;
+    width: 70%;
+    right: 0;
+    height: calc(100% - 3.5rem);
+    visibility: hidden;
+  }
+  @-webkit-keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 70%;
+    }
+    100% {
+      width: 70%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 70%;
+    }
+    100% {
+      width: 70%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @-webkit-keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 70%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+  @keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 70%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 700px) and (max-width: 800px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #aside-shop {
+    position: absolute;
+    z-index: 1000;
+    width: 60%;
+    right: 0;
+    height: calc(100% - 3.5rem);
+    visibility: hidden;
+  }
+  @-webkit-keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 60%;
+    }
+    100% {
+      width: 60%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 60%;
+    }
+    100% {
+      width: 60%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @-webkit-keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 60%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+  @keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 60%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 800px) and (max-width: 1000px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #aside-shop {
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    right: 0;
+    height: calc(100% - 3.5rem);
+    visibility: hidden;
+  }
+  @-webkit-keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 50%;
+    }
+    100% {
+      width: 50%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 50%;
+    }
+    100% {
+      width: 50%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @-webkit-keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 50%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+  @keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 50%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1000px) and (max-width: 1280px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #button-shop {
+    display: none;
+  }
+  #aside-shop {
+    -webkit-box-flex: 0.8;
+        -ms-flex: 0.8;
+            flex: 0.8;
+    visibility: visible;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1280px) {
+  #section-products {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #button-shop {
+    display: none;
+  }
+  #aside-shop {
+    visibility: visible;
+  }
+}
+
+/* Only by aside-shop heigth*/
+@media (max-width: 550px) {
+  @-webkit-keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @keyframes animation-shop-open {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+    }
+    10% {
+      opacity: 1;
+    }
+    40% {
+      height: 50%;
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+      height: calc(100% - 3.5rem);
+      visibility: visible;
+    }
+  }
+  @-webkit-keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 100%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+  @keyframes animation-shop-close {
+    0% {
+      visibility: visible;
+    }
+    60% {
+      height: 50%;
+      width: 100%;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 0%;
+      height: 40%;
+      visibility: hidden;
+    }
+  }
+}
+/*# sourceMappingURL=media.css.map */
