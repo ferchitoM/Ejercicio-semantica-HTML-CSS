@@ -47,7 +47,7 @@
 
           <section id="section-products">
             <!-- *PRODUCT -->
-            <!-- <article class="selected" v-for="i in 10">
+            <article class="selected" v-for="i in 10">
               <span class="cantidad">{{i}}</span>
               <div class="marco-img">
                 <h5 class="id">647189</h5>
@@ -63,43 +63,60 @@
               </div>
               <h5 class="nombre">Aurora Lux - Ryzen 5 4600+</h5>
               <h4 class="precio">$ 2.500</h4>
-            </article> -->
-            <!-- *PRODUCT -->
-
-            <article class="pro">
-                <h5>13453</h5>
-              <div
-                class="image"
-                style="background-image: url('images/gamer1.jpg')"
-              >
-                    
-                    <span><i class="material-icons prefix">star</i></span>
-                    <small>Inv 100</small>
-            </div>
             </article>
-            
+            <!-- *PRODUCT -->
           </section>
         </main>
 
         <!-- *SHOPPING CAR -->
         <aside id="aside-shop" :class="shop_state">
-          <h4>SALES INVOICE</h4>
+          <h4 id="shop-title">SALES INVOICE</h4>
           <div class="triangle"></div>
+
+          <!-- *FORM -->
+          <div class="form-shop">
+            <div class="input-group">
+              <select name="money">
+                <option value="">COP</option>
+              </select>
+              <label>Moneda</label>
+            </div>
+            <div class="input-group">
+              <select name="money">
+                <option value="">GENERAL</option>
+              </select>
+              <label>Lista de precios</label>
+            </div>
+            <div class="input-group mb-0">
+              <input placeholder="Documento" type="text" />
+              <label for="first_name">Datos cliente</label>
+            </div>
+            <div class="input-group mb-0">
+              <input placeholder="Nombre" type="text" />
+            </div>
+          </div>
+          <!-- *FORM -->
 
           <!-- *ITEMS -->
           <section>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article</article>
-            <article>Article n</article>
+            <article v-for="i in 20">
+              <div class="item-data">
+                <h4 class="name">{{i}}. Aurora Lux - Ryzen 5 Ultra</h4>
+                <h4 class="price">
+                  $ 2.500,00
+                  <small>12341</small>
+                </h4>
+              </div>
+              <div class="item-buttons">
+                <span>-</span>
+                <h4 class="quantity">10</h4>
+                <span>+</span>
+              </div>
+              <div class="total">
+                <p>$ 25.000.000,00</p>
+                <i class="material-icons">delete</i>
+              </div>
+            </article>
           </section>
 
           <footer>
