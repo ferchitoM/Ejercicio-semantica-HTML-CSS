@@ -487,12 +487,12 @@ main {
   vertical-align: middle;
   text-align: center;
   border: 2px solid #44c6b7;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 2.3rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 1.9rem;
   color: #44c6b7;
   font-weight: 500;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
 }
 
 #aside-shop section article .total {
