@@ -17,6 +17,12 @@
     right: 0;
     height: calc(100% - 3.5rem);
   }
+  #aside-shop article {
+    margin-bottom: 1rem;
+  }
+  #aside-shop article .item-buttons, #aside-shop article .total {
+    height: 2rem !important;
+  }
   #aside-index {
     display: none;
   }
@@ -39,6 +45,12 @@
     right: 0;
     height: calc(100% - 3.5rem);
     visibility: hidden;
+  }
+  #aside-shop article {
+    margin-bottom: 1rem;
+  }
+  #aside-shop article .item-buttons, #aside-shop article .total {
+    height: 2rem !important;
   }
   #section-search input {
     width: 50%;
@@ -359,6 +371,12 @@
         -ms-flex: 0.8;
             flex: 0.8;
     visibility: visible;
+  }
+  #aside-shop article {
+    margin-bottom: 1rem;
+  }
+  #aside-shop article .item-buttons, #aside-shop article .total {
+    height: 2rem !important;
   }
 }
 

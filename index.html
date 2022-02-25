@@ -47,16 +47,18 @@
 
           <section id="section-products">
             <!-- *PRODUCT -->
-            <article class="selected" v-for="i in 10">
-              <span class="cantidad">{{i}}</span>
+            <article :class="i%3 == 0 ? 'selected' : ''" v-for="i in 20">
+              <span v-if="i%3 == 0" class="cantidad">{{i}}</span>
               <div class="marco-img">
                 <h5 class="id">647189</h5>
-                <span class="top">
+                <span class="top" v-if="i%2 == 0">
                   <i class="material-icons prefix">star</i>
                 </span>
                 <div
                   class="img-prod"
-                  style="background-image: url('images/gamer1.jpg')"
+                  :style="{
+                    'background-image': `url('images/gamer${showImage(i)}.jpg')`
+                  }"
                 >
                   <small class="inventario">Inv 100</small>
                 </div>
@@ -79,7 +81,7 @@
               <select name="money">
                 <option value="">COP</option>
               </select>
-              <label>Moneda</label>
+              <label>Currency</label>
             </div>
             <div class="input-group">
               <select name="money">
@@ -102,19 +104,21 @@
             <article v-for="i in 20">
               <div class="item-data">
                 <h4 class="name">{{i}}. Aurora Lux - Ryzen 5 Ultra</h4>
-                <h4 class="price">
+                <span class="price">
                   $ 2.500,00
                   <small>12341</small>
-                </h4>
+                </span>
               </div>
-              <div class="item-buttons">
-                <span>-</span>
-                <h4 class="quantity">10</h4>
-                <span>+</span>
-              </div>
-              <div class="total">
-                <p>$ 25.000.000,00</p>
-                <i class="material-icons">delete</i>
+              <div class="controls">
+                <div class="item-buttons">
+                  <span>-</span>
+                  <h4 class="quantity">10</h4>
+                  <span>+</span>
+                </div>
+                <div class="total">
+                  <p>$ 25.000.000,00</p>
+                  <i class="material-icons">delete</i>
+                </div>
               </div>
             </article>
           </section>
